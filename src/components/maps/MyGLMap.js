@@ -6,7 +6,7 @@ const Map_Token = REACT_APP_MAPBOX_ACCESS_TOKEN
 
 
 const Map_Layer = `https://api.mapbox.com/styles/v1/mapbox/streets-v9?access_token=${Map_Token}`
-const MyGlMap = () => {
+const MyGLMap = () => {
     return <Map
         initialViewState={{
             longitude: -100,
@@ -19,4 +19,4 @@ const MyGlMap = () => {
     />;
 }
 
-export default MyGlMap;
+export default MyGLMap;

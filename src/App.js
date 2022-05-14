@@ -1,14 +1,12 @@
 
 import './App.css';
-import MyGlMap from './components/MyGlMap';
+import SideBar from './components/layouts/Sidebar';
 
 function App() {
   return (
-    <div>
-      <h1 className="text-3xl font-bold underline">
-        Hello world!
-      </h1>
-      <MyGlMap />
+    <div> 
+      <SideBar/>    
+      
     </div>
   );
 }
