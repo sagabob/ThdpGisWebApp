@@ -9,11 +9,11 @@ const Map_Layer = `https://api.mapbox.com/styles/v1/mapbox/streets-v9?access_tok
 const MyGLMap = () => {
     return <Map
         initialViewState={{
-            longitude: -100,
-            latitude: 40,
-            zoom: 3.5
+            longitude: 172.639847,
+            latitude: -43.525650,
+            zoom: 9
         }}
-        style={{ width: 600, height: 400 }}
+        style={{ width: "100vw", height: "100vh" }}
         mapStyle={Map_Layer}
         mapboxAccessToken = {Map_Token}
     />;
