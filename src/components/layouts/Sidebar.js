@@ -12,13 +12,13 @@ const SideBar = () => {
                 </div>
                 <div className="bg-gray-200 min-h-screen">
                     <ul className="w-full">
-                        <li className="flex items-center justify-start mb-2 px-2 py-3 hover:bg-sky-50 cursor-pointer group">
+                        <li className="flex items-center justify-start  px-2 py-3 hover:bg-sky-50 cursor-pointer group border-sky-50 border-b-2">
                             <button type="button" className="flex items-center justify-center rounded-lg text-blue-600 group-hover:text-purple-500">
                                 <ViewGridIcon className="w-6 h-6" />
                                 <span className="ml-1 group-hover:font-bold">Layers</span>
                             </button>
                         </li>
-                        <li className="flex items-center justify-start mb-2 px-2 py-3 hover:bg-sky-50 cursor-pointer group">
+                        <li className="flex items-center justify-start  px-2 py-3 hover:bg-sky-50 cursor-pointer group border-sky-50 border-b-2">
                             <button type="button" className="flex items-center justify-center rounded-lg text-blue-600 group-hover:text-purple-500" >
                                 <PencilAltIcon className="w-6 h-6" />
                                 <span className="ml-1 group-hover:font-bold">Draw Shapes</span>
