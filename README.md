@@ -28,7 +28,7 @@ A simple website to search places in Christchurch, New Zealand (workin in progre
 ## Built With
 * [React](https://reactjs.org/)
 * [react-map-gl](https://visgl.github.io/react-map-gl/)
-  <br/>A React wrapper for [Mapbox GL JS](https://docs.mapbox.com/mapbox-gl-js/guides/) 
+  <br/>A React wrapper for [Mapbox GL JS](https://docs.mapbox.com/mapbox-gl-js/guides/). It uses WebGL technology which performs better and opens to vector maps.   
 * [Tailwindcss](https://tailwindcss.com/)
   <br/>Tailwindcss is a simple css framework designed for rapid development, so it fits our intention.  
 * [Vercel](https://vercel.com/)
