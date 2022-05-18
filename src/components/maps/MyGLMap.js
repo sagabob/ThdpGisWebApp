@@ -3,6 +3,9 @@ import 'mapbox-gl/dist/mapbox-gl.css';
 import SearchContextConsumer from '../layouts/SearchContext';
 import React, { useContext } from 'react';
 
+import mapboxgl from 'mapbox-gl/dist/mapbox-gl';
+import MapboxWorker from 'mapbox-gl/dist/mapbox-gl-csp-worker';
+mapboxgl.workerClass = MapboxWorker;
 
 
 const { REACT_APP_MAPBOX_ACCESS_TOKEN } = process.env;
