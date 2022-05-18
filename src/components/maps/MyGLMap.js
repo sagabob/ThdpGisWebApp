@@ -2,10 +2,10 @@ import Map, { NavigationControl, Marker, Popup, ScaleControl } from 'react-map-g
 import 'mapbox-gl/dist/mapbox-gl.css';
 import SearchContextConsumer from '../layouts/SearchContext';
 import React, { useContext } from 'react';
+import mapboxgl from "mapbox-gl"; // This is a dependency of react-map-gl even if you didn't explicitly install it
 
-import mapboxgl from 'mapbox-gl/dist/mapbox-gl';
-import MapboxWorker from 'mapbox-gl/dist/mapbox-gl-csp-worker';
-mapboxgl.workerClass = MapboxWorker;
+// eslint-disable-next-line import/no-webpack-loader-syntax
+mapboxgl.workerClass = require("worker-loader!mapbox-gl/dist/mapbox-gl-csp-worker").default;
 
 
 const { REACT_APP_MAPBOX_ACCESS_TOKEN } = process.env;
