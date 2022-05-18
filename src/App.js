@@ -1,23 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
 
-function App() {
+import React, { useState } from 'react';
+import './App.css';
+import Searchbar from './components/layouts/Searchbar';
+import SideBar from './components/layouts/Sidebar';
+import MyGLMap from './components/maps/MyGLMap';
+import { SearchContextProvider } from './components/layouts/SearchContext';
+import {defaultPosition} from './utils/constant'
+
+
+const App = () => {
+  const [searchValue, setSearchValue] = useState("")
+  const [loadedGeoData, getGeoData] = useState(null)
+  const [selectedGeo, setSelectedGeo] = useState(null)
+  const [initialPosition, setPosition] = useState(defaultPosition)
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <SearchContextProvider value={{ searchValue, setSearchValue, loadedGeoData, getGeoData, selectedGeo, setSelectedGeo, initialPosition, setPosition }}>
+        <SideBar />
+        <Searchbar />
+        <MyGLMap />
+      </SearchContextProvider>
     </div>
   );
 }
