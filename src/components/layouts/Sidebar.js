@@ -6,7 +6,7 @@ const SideBar = () => {
         <aside className="w-52 shadow-md fixed top-0 left-0 min-h-screen z-50 bg-gray-50" aria-label="Sidebar">
             <div className="">
                 <div className="flex items-center justify-center px-2 py-3 shadow-md border-b-2 border-gray-300">
-                    <a href="#" className="flex items-center justify-center">
+                    <a href="https://tdp-techground.info/" className="flex items-center justify-center">
                         <img src={logo} className="w-16" alt="Tdp Logo" />
                     </a>
                 </div>

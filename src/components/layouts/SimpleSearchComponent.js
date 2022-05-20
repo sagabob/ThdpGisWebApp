@@ -1,21 +1,26 @@
-import React, { useState, useCallback } from 'react';
+import React, { useState, useCallback, useMemo } from 'react';
 import { debounce } from "lodash"
 
 const SimpleSearchComponent = ({ searchValue, setSearchValue, debounceTimeout, cssClassName, cssStyle }) => {
 
     const [localsearchValue, setLocalSearchValue] = useState(searchValue)
 
-    const delayInput = useCallback(
-        debounce(searchInput => {
-            setSearchValue(searchInput)
-        }, debounceTimeout),
-        []
+    /***IMPORTANT useMemo is used here due to a warning when trying to use callback for the debounce function*/
+    const delayInput = useMemo(
+        () =>
+            debounce(searchInput => {
+                setSearchValue(searchInput)
+            }, debounceTimeout),
+        [setSearchValue,debounceTimeout]
     );
 
-    const handleSearchValueChange = event => {
-        setLocalSearchValue(event);
-        delayInput(event);
-    }
+    const handleSearchValueChange = useCallback(
+        event => {
+            setLocalSearchValue(event);
+            delayInput(event);
+        },
+        [delayInput]
+    );
 
     return (
         <>
