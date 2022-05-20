@@ -29,7 +29,7 @@ export const DropdownComponent = () => {
     const updatingSelectedSearchResult = (selected) => {
         setSelectedGeo(selected)
         setPosition({ ...defaultPosition, longitude: Number(selected.geometry.coordinates[0][0]), latitude: Number(selected.geometry.coordinates[0][1]) })
-    }
+    };
 
     const baseClassListItem = "w-full px-1 py-1 rounded-lg  border-solid border-2 border-emerald-100 flex cursor-pointer hover:border-emerald-500"
     const baseClassListItemSelected = "w-full px-1 py-1 rounded-lg  border-solid border-2 border-blue-500 flex cursor-pointer hover:border-emerald-500"
