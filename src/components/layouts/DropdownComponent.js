@@ -22,6 +22,11 @@ export const DropdownComponent = () => {
             geGeoDataAsync();
             setSelectedGeo(null);
         }
+        else
+        {
+            getGeoData(null);
+            setSelectedGeo(null);
+        }
            
 
     }, [searchValue, getGeoData, setSelectedGeo]);
