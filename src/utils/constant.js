@@ -1,5 +1,6 @@
-const searchInstanceUrl = "https://data.tdpapigis.tech/api/GisQuery/instances"
-const searchGeoTypeUrl = "https://data.tdpapigis.tech/api/GisQuery/querybytext"
+const baseUrl = "https://gisapi.tdp-tech.store/api"
+const searchInstanceUrl = `${baseUrl}/GisQuery/instances`
+const searchGeoTypeUrl = `${baseUrl}/GisQuery/querybytext`
 
 const defaultPosition = {
     longitude: 172.639847,

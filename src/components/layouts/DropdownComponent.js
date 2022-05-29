@@ -1,11 +1,11 @@
 import React, { useEffect, useContext } from 'react'
 import SearchContextConsumer from './SearchContext';
-import { searchGeoTypeUrl, defaultPosition } from '../../utils/constant';
+import { searchGeoTypeUrl } from '../../utils/constant';
 import axios from "axios";
 import searchIcon from '../../assets/images/features/point-of-interest.svg'
 
 export const DropdownComponent = () => {
-    const { searchValue, loadedGeoData, getGeoData, selectedGeo, setSelectedGeo, setPosition } = useContext(SearchContextConsumer);
+    const { searchValue, loadedGeoData, getGeoData, selectedGeo, setSelectedGeo, setPosition, initialPosition } = useContext(SearchContextConsumer);
 
     useEffect(() => {
 
@@ -18,22 +18,17 @@ export const DropdownComponent = () => {
 
         }
         if (searchValue.length >= 3)
-        {
             geGeoDataAsync();
-            setSelectedGeo(null);
-        }
         else
-        {
-            getGeoData(null);
-            setSelectedGeo(null);
-        }
-           
+            getGeoData(null); //Empty the dropdownlist
+
+        setSelectedGeo(null); //Reset the selected geofeature
 
     }, [searchValue, getGeoData, setSelectedGeo]);
 
     const updatingSelectedSearchResult = (selected) => {
         setSelectedGeo(selected)
-        setPosition({ ...defaultPosition, longitude: Number(selected.geometry.coordinates[0][0]), latitude: Number(selected.geometry.coordinates[0][1]) })
+        setPosition({ ...initialPosition, longitude: Number(selected.geometry.coordinates[0][0]), latitude: Number(selected.geometry.coordinates[0][1]) })
     };
 
     const baseClassListItem = "w-full px-1 py-1 rounded-lg  border-solid border-2 border-emerald-100 flex cursor-pointer hover:border-emerald-500"
