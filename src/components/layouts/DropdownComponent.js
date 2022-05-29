@@ -18,16 +18,11 @@ export const DropdownComponent = () => {
 
         }
         if (searchValue.length >= 3)
-        {
             geGeoDataAsync();
-            setSelectedGeo(null);
-        }
         else
-        {
-            getGeoData(null);
-            setSelectedGeo(null);
-        }
-           
+            getGeoData(null); //Empty the dropdownlist
+
+        setSelectedGeo(null); //Reset the selected geofeature
 
     }, [searchValue, getGeoData, setSelectedGeo]);
 
