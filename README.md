@@ -23,7 +23,7 @@
 * [Contact](#contact)
   
 ## About the project
-A simple website to search places in Christchurch, New Zealand (workin in progress). We can search points of interest such as parks, gardens, street addresses or houses.
+A simple website to search places in Christchurch, New Zealand (working in progress). We can search points of interest such as parks, gardens, street addresses or houses.
 
 ## Built With
 * [React](https://reactjs.org/)
