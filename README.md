@@ -12,7 +12,7 @@
   <p align="center">
     A simple website to search places in Christchurch, New Zealand
     <br />  
-    <a href="https://thdp-gis-web-app.vercel.app/" target="_blank"><strong>Explore the site »</strong></a>   
+    <a href="https://giswebapp.tdp-tech.store/" target="_blank"><strong>Explore the site »</strong></a>   
   </p>
 </p>
  
