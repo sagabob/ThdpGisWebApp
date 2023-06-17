@@ -1,4 +1,4 @@
-const baseUrl = "https://tdpgissvc.azurewebsites.net/api"
+const baseUrl = "https://giswebapi.tdp-store.info/api"
 const searchInstanceUrl = `${baseUrl}/GisQuery/instances`
 const searchGeoTypeUrl = `${baseUrl}/GisQuery/querybytext`
 

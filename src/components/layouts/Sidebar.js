@@ -20,7 +20,6 @@ const SideBar = () => {
                         </li>                       
                     </ul>
                 </div>
-
             </div>
         </aside>
     )
